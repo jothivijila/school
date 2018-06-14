@@ -1,0 +1,563 @@
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="language" content="en" />
+ 
+ <!-- CSS main application styling. -->
+ 
+<link rel="icon" type="image/ico" href="uploadedfiles/school_logo/favicon.ico"/>
+           
+ <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+ <link rel="stylesheet" type="text/css" href="css/style.css" />
+ <link rel="stylesheet" type="text/css" href="css/explorertab.css" />
+ <link rel="stylesheet" type="text/css" href="css/formstyle.css" />
+ <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+ <link rel="stylesheet" type="text/css" href="css/formelements.css" />
+ <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+ 
+      <link rel="stylesheet" type="text/css" href="css/theme.css" />
+ 
+ <!-- JS main application jquery. -->
+ <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+ <script type="text/javascript" src="js/chart/highcharts.js"></script>
+ <script type="text/javascript" src="js/custom-form-elements.js"></script>
+ </script>
+ <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+ <script>
+	$(document).ready(function() {
+	$("#lodrop").click(function(){
+	
+            	if ($("#account_drop").is(':hidden')){
+                	$("#account_drop").show();
+				}
+            	else{
+                	$("#account_drop").hide();
+            	}
+            return false;
+       			 });
+				  $('#account_drop').click(function(e) {
+            		e.stopPropagation();
+        			});
+        		$(document).click(function() {
+					if (!$("#account_drop").is(':hidden')){
+            		$('#account_drop').hide();
+					}
+        			});	
+                
+});
+</script>
+ <script>
+$(document).ready(function() {
+$("#book_drop").click(function(){
+	
+            	if ($("#bookmark").is(':hidden')){
+                	$("#bookmark").show();
+				}
+            	else{
+                	$("#bookmark").hide();
+            	}
+            return false;
+       			 });
+				  $('#bookmark').click(function(e) {
+            		e.stopPropagation();
+        			});
+        		$(document).click(function() {
+					if (!$("#bookmark").is(':hidden')){
+            		$('#bookmark').hide();
+					}
+        			});	
+                
+});
+</script>
+ 
+ <style type="text/css">
+.select-style {
+	width: 221px;
+	height: 30px;
+	padding: 5px 0 0 0;
+	overflow: hidden;
+	background: #272b2f url("images/icon-select.png") no-repeat 96% 50%;
+}
+.select-style select {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: medium none;
+	box-shadow: none;
+	color: #727272;
+	font-size: 11px;
+	padding: 5px 8px;
+	text-transform: uppercase;
+	width: 130%;
+}
+.select-style select:focus {
+	outline: none;
+}
+</style>
+ <link rel="stylesheet" type="text/css" href="assets/1055f154/css/jquery.qtip.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/1055f154/css/mailbox.css" />
+<link rel="stylesheet" type="text/css" href="assets/1055f154/css/mailbox_widget.css" />
+<script type="text/javascript" src="assets/9c0057ba/jquery.min.js"></script>
+<script type="text/javascript" src="assets/9c0057ba/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/1055f154/js/flash.js"></script>
+<script type="text/javascript" src="assets/1055f154/js/jquery.colors.js"></script>
+<script type="text/javascript" src="assets/1055f154/js/jquery.qtip.min.js"></script>
+</head>
+ <title>
+  Institution Name</title>
+     <body style="background-color:">
+
+<div class="action_bar" style="background-color: ">
+   <div class="action_bar_wrap">
+    <a id="open_apps" class="explorer_but" style="color: " href="#"><span class="flaticon-expand41"></span>OPEN APP EXPLORER</a>    <a href="index.php?r=mailbox" class="mssgimg flaticon-email103" style="color: " title="Unread Message(s)"><span>2</span></a> 
+	
+	<a href="#" class="usernamebx" style="background-color: ; color: " id="lodrop">Account<span class="flaticon-arrow486"></span></a>  
+	</div>
+ </div>
+<div class="wrapper">
+   <div id="explorer_handler"></div>
+   <!--<div class="cont_left_logo"><a href="#"><img src="images/openschool-l-logo.png" alt="" width="208" height="141" border="0" /></a></div>-->
+   <div class="header">
+    <div class="lo_drop" style="background-color:" id="account_drop">
+       <div class="lo_name">
+                        <span style="color: "> Admin </span>
+                <div class="clear"></div>
+      </div>
+      
+       <ul>
+        <li>
+			<a style="color:" href="index.php?r=activityFeed">My Account</a>      	</li>
+         
+               
+      
+        <li><a style="color:" href="index.php?r=configurations/create">Preference</a></a></li>
+        
+         <li>
+      
+     	
+                        <li><a style="color: " href="https://open-school.org/help" target="_blank">Help</a></li>	
+                         
+                 
+        <li> <a style="color:" href="index.php?r=user/logout">Logout</a></li>
+        
+      </ul>
+     </div>
+       
+    <div class="logo"> 
+       <a href="">
+               </a>
+       
+   
+        </div>
+    <!--<div align="center">
+          
+     <a id="print_button" href="javascript:window.print();",'_blank'>print</a>
+     </div>-->
+    <div class="logo_right">
+       <ul>
+        <li> 
+           
+           <!-- Academic Year Dropdown -->
+           
+                      <div class="select-style" style="background-color:">
+              
+            <select style="color:" name="system_yid" id="system_yid">
+<option value="">Select Year</option>
+<option value="1" selected="selected">AY 2017-2018</option>
+</select>          </div>
+                                 
+           <!-- END Academic Year Dropdown --></li>
+        <li>
+           <div class="searchbx" >
+   <form id="yw0" action="/index.php?r=site/search" method="post">
+<div style="display:none"><input type="hidden" value="0181a9cdfb1da78e38439a92d2383edc95b97276" name="YII_CSRF_TOKEN" /></div>                           <ul>
+                <li>
+                   <input style="background-color: ; color:;" class="searchbar search-icon" name="char" type="text" value="">
+                 </li>
+                <li style="position:relative">
+                   <input style="background-color: " class="search_area search-icon" src="images/search.png" type="image" name="555" value="submit">
+                 </li>
+              </ul>
+            <!-- </form>-->
+            </form>  
+          </div>
+         </li>
+      </ul>
+     </div>
+  </div>
+  
+  
+     <div class="navigation_wrapper_outer"  style="height:161px; background-color: ; border-color: ">
+    <div class="navigation_wrapper">
+    <div class="nav-secn-border" style="border-color: " >
+       <div class="nav" style="border-color: " >
+        <ul id="sortable1" class="connectedSortable">
+		
+			
+		   <li>           
+            <a class=" active" style="border-color:; color:" href="index.php?r=dashboard"><i class="fa fa-tachometer"></i></br>Dashboard</a>          </li>
+		  
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=activityFeed"><i class="fa fa-home"></i></br>My Account</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=students"><i class="fa fa-graduation-cap"></i></br>Students</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=employees"><i class="fa fa-users"></i></br>Teachers</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=courses"><i class="fa fa-folder-open"></i></br>Courses</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=examination"><i class="fa fa-edit"></i></br>Examination</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=attendance"><i class="fa fa-calendar"></i></br>Attendance</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=timetable"><i class="fa fa-calendar-o"></i></br>Timetable</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=fees"><i class="fa fa-credit-card"></i></br>Fees</a>          </li>
+          
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=configurations"><i class="fa fa-gear"></i></br>Settings</a>          </li>
+         
+        
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=hostel"><i class="fa fa-building"></i></br>Hostel</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=transport"><i class="fa fa-bus"></i></br>Transport</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=library"><i class="fa fa-bank"></i></br>Library</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=downloads"><i class="fa fa-download"></i></br>Downloads</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=importcsv"><i class="fa fa-sign-in"></i><br>Import</a>          </li>
+           <li>
+            <a class="" style="border-color:; color:" href="index.php?r=export"><i class="fa fa-sign-out"></i><br>Export</a>          </li>
+          <li>
+            <a class="" style="border-color:; color:" href="index.php?r=notifications/default/sendmails"><i class="fa fa-comments"></i><br>Notify</a>          </li>
+		  
+		   <li>
+            <a class="" style="border-color:; color:" href="index.php?r=report"><i class="fa fa-newspaper-o"></i></br>Reports</a>          </li>
+          
+        
+          <li>
+			 <a class="" style="border-color:; color:" href="index.php?r=purchase"><i class="fa fa-shopping-cart"></i></br>Purchase</a>          </li>
+          
+          <li>
+      			<a class="" style="border-color:; color:" href="index.php?r=hr/leaveTypes/index"><i class="fa fa-user"></i></br>HR</a>          </li>
+        
+         
+         </ul>
+      </div>
+      </div>
+     </div>
+  </div>
+   
+   
+   <div class="midnav" style="background-color: ; color: ">
+    <div class="breadcrumbs">
+<a href="index.php?r=dashboard">Home</a><span>Dashboard</span></div>  </div>
+   <div class="container"> <div class="container">
+	<div id="content">
+		<link href="css/tabulous.css" rel="stylesheet" type="text/css" />
+<link href="css/portal/portal_dashboard.css" rel="stylesheet" type="text/css" />
+<script src="js/tab/tabulous.js"></script>
+<script src="js/tab/dash_tab.js"></script>
+<script src="js/scroll/perfect-scrollbar.js"></script>
+<script src="js/scroll/jquery.mousewheel.js"></script>
+
+<link rel="stylesheet" href="css/jquery-ui.css">
+<script src="js/jquery-ui-1.11.4.js"></script>
+<script>
+      jQuery(document).ready(function ($) {
+        "use strict";
+        $('.Default').perfectScrollbar();
+      });
+</script>
+<script type="text/javascript" src="js/justgage.1.0.1.min.js"></script>
+<script type="text/javascript" src="js/raphael.2.1.0.min.js"></script>
+
+
+
+
+<div class="dashboard_bg" id="dashboard_block">
+    <div class="clear"></div>
+    
+        
+        <div class="os_dash_box block_class" block-id="1">
+            <div class="dash_subhed">
+                <div class="dash_subhed_hide_one news">
+                	News                </div>
+                <div class="dash_subhed_hide_two" title="Hide this block" id="1"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            
+            <div class="Default dash_box1_iner-pdng dash_bord-scrol left-icon dash_box-pading" >
+                <ul>
+                    
+                            <li class="mail_green">
+                                <h3>Nature Club Inauguration</h3>
+                                <p>Inauguration on June 13 at 10 am</p>
+                                <span>10 months ago</span>
+                            </li>
+                                    </ul>
+            </div>
+
+            <div class="dash_bottom dashboard-action-blk">
+                <ul>
+                    <li></li>
+                    <li><a href="index.php?r=mailbox/news">View</a></li>
+                                                                                
+                        <li><a href="index.php?r=news/create">Create</a></li>
+                                        
+                </ul>
+            </div>
+        </div>        
+    
+    
+        <div class="os_dash_box block_class" block-id="3">
+            <div class="dash_subhed">
+            <div class="dash_subhed_hide_one  student">Student</div>
+            <div class="dash_subhed_hide_two" title="Hide this block" id="3"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <div class="dash_box-pading">
+                <a href="index.php?r=students/students/manage">
+                    <div class="dash_st_grid st_grid_colr1">                    
+                        <h3>53</h3>
+                        <p>Total</p>
+                         <p>Student</p>
+                        
+                    </div>
+                </a>
+                <a href="index.php?r=students">
+                <div class="dash_st_grid st_grid_colr2">
+                    <h3>10</h3>
+                    <p>New</p>
+                    <p>Admissions</p>
+                </div>
+                </a>
+                <a href="index.php?r=students/students/manage&Students[status]=0">
+                <div class="dash_st_grid st_grid_colr3">                
+                    <h3>0</h3>
+                    <p>Inactive</p>
+                    <p>Students</p>
+                </div>
+                </a>
+                <div class="clear-fix"></div>
+                <div class="cv">
+                   <div id="container" style="width:100%; height: 155px; margin: 0 auto"></div>
+                </div>           
+            </div>                
+            <div class="dash_bottom dashboard-action-blk">
+                <ul>
+                    <li></li>
+                    <li><a href="index.php?r=students/students/manage">View</a></li>
+                                        <li><a href="index.php?r=students/students/create">Create</a></li>
+                                    </ul>
+            </div>
+        </div>
+    
+    
+        <script type="text/javascript">
+var chart;
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'container',
+			type: 'column'
+		},
+		title: {
+			text: 'Monthly Average Admissions'
+		},
+		subtitle: {
+		},
+		xAxis: {
+			categories: 
+				["Jun","May","Apr","Mar","Feb","Jan","Dec","Nov","Oct","Sep","Aug","Jul",]			
+		},
+		yAxis: {
+			min: 0,
+			title: {
+				text: 'No.of Admissions'
+			}
+		},
+		credits: {
+			enabled: false
+		},
+
+		legend: {
+			layout: 'none',
+
+		},
+		tooltip: {
+			formatter: function() {
+				return ''+
+					this.x +': '+ this.y +' '+'Admissions';
+			}
+		},
+		plotOptions: {
+			column: {
+				pointPadding: 0.2,
+				borderWidth: 0
+			}
+		},
+			series: [{
+			name: 'Month',
+			data: [2,1,0,0,0,50,0,0,0,0,0,0,],
+			color:'#adce5c',
+		}, ]
+	});
+});
+</script> 
+        <div class="os_dash_box block_class" block-id="4">
+            <div class="dash_subhed ">
+            <div class="dash_subhed_hide_one  teacher">Teacher</div>
+            <div class="dash_subhed_hide_two" title="Hide this block" id="4"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+                    <div class="dash_box-pading">
+                    <a href="index.php?r=employees/employees/manage">
+                    <div class="dash_st_grid2 t_grid_colr1">
+                        <h3>20</h3>
+                        <p>Total Teachers</p>
+                    </div>
+                </a>
+                <a href="index.php?r=employees">		
+                    <div class="dash_st_grid2 st_grid_colr2">
+                        <h3>10</h3>
+                        <p>Recently Hired</p>
+                    </div>
+                </a>
+            </div>
+            <div class="dash_bottom dashboard-action-blk">
+            <ul>
+                <li></li>
+                <li><a href="index.php?r=employees/employees/manage">View</a></li>
+                                <li><a href="index.php?r=employees/employees/create">Create</a></li>
+                                
+            </ul>
+            </div>
+        </div>
+    
+            <div id="dashboard_err" style="display:none">
+            <div class="yellow_bx" style="background-image:none;padding-bottom:45px;">
+                    <div class="y_bx_head" style="width:650px;">
+                    All blocks in the dashboard are disabled. You can change it from Dashboard Settings                    </div>
+                    <div class="y_bx_list" style="width:650px;">
+                            <h1><a href="index.php?r=dashboard/settings">Dashboard Settings</a></h1>
+                    </div>
+            </div>
+        </div><br />
+            
+    <div class="clear"></div>
+    <div id="jobDialog"></div>
+</div>
+<style>
+.placeholder {
+  background: #f3f3f3;
+  visibility: visible;
+  height: auto;
+  float:left;
+}  
+
+</style> 
+<script>
+$(document).ready(function()
+{
+    if($('.block_class:visible').length === 0)        
+        $('#dashboard_err').show('medium');
+});
+    
+$('.dash_subhed_hide_two').click(function()
+{
+   //alert($(this).attr('id')); 
+   var that         =   $(this);
+   var $block_id    =   $(that).attr('id');
+   $.ajax({
+		type:'POST',
+		url:'/index.php?r=dashboard/settings/hideBlock',
+		data:{block_id : $block_id, "YII_CSRF_TOKEN":"0181a9cdfb1da78e38439a92d2383edc95b97276"},
+		cache:false,
+		dataType:"json",
+		success: function(response)
+                {
+                    if(response.status=="success")
+                    {                        
+                        $(that).closest('.block_class').hide('slow');                        
+                        if($('.block_class:visible').length-1 === 0)
+                        {                            
+                            $('#dashboard_err').show('medium');
+                        }
+                    }
+                    else{
+                        alert("Some problem found while update dashboard");
+                    }
+		},
+                error:function(){
+                    alert("Some problem found while update dashboards");
+                }
+	});
+        
+   
+   
+   
+});  
+    
+    
+$( function() {
+    $( "#dashboard_block" ).sortable({
+        forcePlaceholderSize: true,
+        placeholder: 'placeholder',
+        update:function(){			
+			save_block_order();
+		}
+        
+    });
+    $( "#dashboard_block" ).disableSelection();       
+  } );    
+  
+  
+  function save_block_order(){
+	var blocks	= [];
+	$('#dashboard_block .block_class').each(function(index, element) 
+        {
+		var block	= {};
+		block.order	= index + 1;
+		block.id		= $( element ).attr('block-id');
+                blocks.push(block);
+        });
+	
+	$.ajax({
+		type:"POST",
+		url:"/index.php?r=dashboard/index/saveOrder",
+		data:{user_id:1, block_data:blocks,"YII_CSRF_TOKEN":"0181a9cdfb1da78e38439a92d2383edc95b97276"},
+		success: function(){
+                    
+		},
+                error:function(){
+                alert("There is some problem found while changing position");
+            }
+	});
+}
+</script>	</div><!-- content -->
+</div>
+    <div class="clear"></div>
+  </div>
+ </div>
+ 
+ <script>
+  window.intercomSettings = {
+    app_id: "jrgna4bh"
+  };
+</script>
+    
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/jrgna4bh';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+ 
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$(".btn").button(); $(".btn-group").buttonset();
+jQuery('body').undelegate('#open_apps','click').delegate('#open_apps','click',function(){jQuery.ajax({'url':'/index.php?r=site/explorer','cache':false,'success':function(html){jQuery("#explorer_handler").html(html)}});return false;});
+jQuery('body').undelegate('#system_yid','change').delegate('#system_yid','change',function(){jQuery.ajax({'type':'POST','url':'/index.php?r=configurations/viewyear','success':function(){location.reload()},'data':{system_yid:$(this).val(), "YII_CSRF_TOKEN":"0181a9cdfb1da78e38439a92d2383edc95b97276"},'cache':false});return false;});
+});
+/*]]>*/
+</script>
+</body>
+
+</html>
+
